@@ -1,0 +1,13 @@
+<h1>Article</h1>
+<%= form_with(model: @article, local: true) do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %><br>
+
+  <%= form.label :description %>
+  <%= form.text_area :description %><br>
+  
+  <%= form.label :category %>
+  <%= form.select :category_id, options_for_select(@categories.map{|c|[c.name,c.id]}),{},{class:"form-control"} %><br>
+
+  <%= form.submit %>
+<% end %>

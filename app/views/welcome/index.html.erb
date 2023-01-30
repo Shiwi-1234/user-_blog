@@ -1,0 +1,9 @@
+<style>body{
+  background-image: url("https://wallpaperaccess.com/full/497101.jpg");
+}
+</style>
+<%= link_to "Categories", categories_path,class: "btn btn-secondary" %>
+<%= link_to "Articles", articles_path,class: "btn btn-secondary" %>
+<center><h1 style="color:dark-blue;">Welcome to Blog Application</h1>
+<p style="color:green;">Create Your Own Beautiful Blog</p></center>
+<%= button_to 'logout',destroy_user_session_path,class: "btn btn-secondary",method: :delete %>
