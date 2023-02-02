@@ -1,2 +1,34 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<style>
+  body{
+  background-color: lightcyan;
+  }
+h1{
+  color:darkblue;
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+ 
+}
+</style>
+<h1><%= @article.title %></h1>
+<div class="d-flex align-items-center justify-content-center" style="height: 70vh" >
+<div class="card bg-info text-white" style="width: 45rem ;>
+  <div class="card-body">
+
+<p>
+  <strong>Description:</strong>
+  <%= @article.description %>
+</p>
+
+<p>
+  <strong>Date</strong>
+  <%= @article.Date  %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @article.Day  %>
+</p>
+</div>
+</div>
+</div>

@@ -1,15 +1,37 @@
-<h2>Sign up</h2>
+<style>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+h2{
+  color:darkblue;
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+.card{
+  height: 100vh;
+  padding: 3px;
+  margin: 3;
+  size: 50%;
+  width: 30rem;
+}
+.field{
+  padding: 5;
+  margin: 3;
+}
 
-  <div class="field">
-    <%= f.label :email %><br />
+</style>
+<div class="d-flex align-items-center justify-content-center" >
+<div class="card">
+    <div class="card border-dark shadow-sm">
+  <div class="card-body">
+     <b><h2 class="card-title">Sign up</h2></b>
+
+<%= bootstrap_form_for(resource, as: resource_name,data:{turbo: false}, url: registration_path(resource_name)) do |f| %>
+ 
+  <span class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+  </span>
 
   <div class="field">
-    <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -17,22 +39,18 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :name %><br />
     <%= f.text_field :name , autofocus: true %>
+    
   </div>
-
   <div class="field">
-    <%= f.label :surname %><br />
     <%= f.text_field :surname, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :interest %><br />
     <%= f.collection_select :interest,Category.all, :id,:name,{},{class: 'form-control'} %>
   </div><br>
 
@@ -42,3 +60,7 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>
+</div>
+</div>

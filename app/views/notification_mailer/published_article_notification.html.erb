@@ -1,5 +1,8 @@
-<h1>Notification#published_article_notification</h1>
+<h1>Hello, <%= @user.name %></h1>
 
-<p>
-  <%= @greeting %>, find me in app/views/notification_mailer/published_article_notification.html.erb
-</p>
+<p>A new article has been published in the <%= @article.category.name %> category:</p>
+
+<h2><%= @article.title %></h2>
+<p><%= @article.description %></p>
+
+<p>Thank you for reading!</p>

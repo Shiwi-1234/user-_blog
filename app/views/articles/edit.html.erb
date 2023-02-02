@@ -1,2 +1,32 @@
-<h1>Articles#edit</h1>
-<p>Find me in app/views/articles/edit.html.erb</p>
+<style>
+.card{
+  padding: 15px;
+  
+}
+body{
+  background-color: lightgrey;
+}
+h1{
+  color:darkblue;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 55px;
+  text-align: left;
+}
+</style>
+<h1> Edit-Article</h1>
+<div class="d-flex align-items-center justify-content-center" style="height: 90vh">
+ <div class="card bg-info text-white" style="width: 30rem ;>
+  <div class="card-body">
+<%= bootstrap_form_with(model: @article, local: true) do |form| %>
+  <%= form.text_field :title %><br>
+  <%= form.text_field :description %><br>
+  <%= form.text_field :Date %><br> 
+  <%= form.text_field :Day %><br>  
+  <%= form.select :category_id, options_for_select(@categories.map{|c|[c.name,c.id]}),{},{class:"form-control"} %><br>
+  <%= form.submit%> <%= link_to "Back", articles_path , class: "btn btn-success" %>
+  <% end %>
+</div>
+</div>
+</div>
+</div>
+

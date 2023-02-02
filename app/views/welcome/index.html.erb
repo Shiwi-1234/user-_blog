@@ -1,9 +1,36 @@
-<style>body{
-  background-image: url("https://wallpaperaccess.com/full/497101.jpg");
+<style>
+  body{
+  background-image: url("https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+  background-repeat: no-repeat;
+  background-size :1450px 725px;
+}
+p{
+  color:purple;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+ text-align: center;
 }
 </style>
-<%= link_to "Categories", categories_path,class: "btn btn-secondary" %>
-<%= link_to "Articles", articles_path,class: "btn btn-secondary" %>
-<center><h1 style="color:dark-blue;">Welcome to Blog Application</h1>
-<p style="color:green;">Create Your Own Beautiful Blog</p></center>
-<%= button_to 'logout',destroy_user_session_path,class: "btn btn-secondary",method: :delete %>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="http://localhost:3001/categories">Categories</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost:3001/articles">Articles</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost:3001/articles/display">Users</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost:3001/articles/published_article">Published-Article</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://localhost:3001/articles/new">Create-Artcles</a>
+    </li>
+  </ul>
+ <%= button_to "Logout", destroy_user_session_path,method: :delete %>    
+</nav>
+<p><b>Publish your passions, your way</b></p>
+

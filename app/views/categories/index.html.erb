@@ -1,2 +1,24 @@
-<h1>categories</h1>
+<style>body{
+  background-color: lightcyan;
+}
+
+</style>
+<center><h1 style="color:darkblue;"><b>All Categories</b></h1></center>
+<table >
+  <table class="table table-condensed" >
+  <table class="table align-middle">
+    <tr>
+        <th>Name</th>
+    </tr>
+    <tbody>
+      <tr>
+        <%  @categories.each do |category|%>
+        <td><%= category.name %></td>
+        <td><%= link_to "Article",category_path(category),class: "btn btn-outline-info "%></td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>
+<%= link_to "Back", controller: :welcome , class: "btn btn-secondary" %>
+
 

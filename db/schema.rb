@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_29_094028) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_30_061919) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -18,6 +18,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_29_094028) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "published", default: false
+    t.date "Date"
+    t.string "Day"
     t.index ["category_id"], name: "index_articles_on_category_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end

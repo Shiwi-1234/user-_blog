@@ -5,6 +5,6 @@ class NotificationMailer < ApplicationMailer
     @user = user
     @article = article 
 
-    mail (to: @user.email, subject:"A new article is published in #{@article.category.name}")
+    mail to: @user.email, subject:"A new article is published in #{@article.category.name}"
     end
 end
